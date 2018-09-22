@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Test Avatars</title>
+        <meta charset="utf-8"/>
+        <script type="text/javascript">
+            module = { exports: {} };
+            const mock = {
+                "prng": () => ({ rand: module.exports.rand }),
+                ".": () => ({ generateSvgAvatar: module.exports.generateSvgAvatar })
+            };
+            require = (m) => mock[m.replace(/^\.\//, "").replace(/\.js$/, "")]();
+        </script>
+        <script type="text/javascript" src="prng.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript">
+            const pkg = require(".");
+            function init () {
+                for (let i = 0; i < 100; ++i) {
+                    document.body.appendChild(pkg.generateSvgAvatar(`0x${ 
+                        Array.from({ length: 40 }, () => "0123456789abcdef"[Math.floor(Math.random() * 16)]).join("")
+                    }`));
+                }
+            }
+        </script>
+        <style type="text/css">
+            body svg {
+                display: inline-block;
+                margin: 10px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body onload="init()">
+
+    </body>
+</html>

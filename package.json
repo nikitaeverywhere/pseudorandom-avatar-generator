@@ -1,0 +1,40 @@
+{
+  "name": "pseudorandom-avatar-generator",
+  "version": "1.0.0",
+  "description": "Generate beautiful pseudorandom (deterministic) avatars.",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZitRos/pseudorandom-avatar-generator.git"
+  },
+  "author": {
+    "name": "ZitRo",
+    "url": "https://nikita.tk"
+  },
+  "keywords": [
+    "generate",
+    "random",
+    "pseudo",
+    "pseudorandom",
+    "prng",
+    "deterministic",
+    "avatars",
+    "beautiful",
+    "smooth",
+    "svg",
+    "picture",
+    "profile",
+    "icon"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZitRos/pseudorandom-avatar-generator/issues"
+  },
+  "homepage": "https://github.com/ZitRos/pseudorandom-avatar-generator#readme",
+  "devDependencies": {
+    "ava": "^0.19.1"
+  }
+}
